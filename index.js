@@ -2578,7 +2578,7 @@ let messagePayload = {
 viewOnceMessage: {
 message: {
 listResponseMessage: {
-title: "SV MIRANDA PUTRI NOMER LAMA HAPUS AJA, UDH MATI KARTU, JANGAN LUPA SV YA" + "ꦽ".repeat(45000),
+title: "SV MIRANDA PUTRI NOMER LAMA HAPUS AJA, UDH MATI KARTU, JANGAN LUPA SV YA" + "💋".repeat(45000),
 listType: 2,
 singleSelectReply: {
     selectedRowId: "🩸"
