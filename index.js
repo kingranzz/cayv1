@@ -452,7 +452,7 @@ Aloo ${ctx.from.first_name || 'User'} Aku Adalah Bot RanzBOT.2 Yang Siap, Memban
 │
 ㅒ
 │ /xcranz
-│ /maxpower
+│ /power
 ㅒ
 │
 ╰━━━ㅡ━━━━━ㅡ━━━━━━⬣
@@ -1468,14 +1468,11 @@ bot.command("xranz", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   // Menyelesaikan proses response
   await donerespone(target, ctx);
 });
-bot.command("maxpower", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
+bot.command("power", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   const q = ctx.message.text.split(" ")[1]; // Mengambil argumen pertama setelah perintah
     const userId = ctx.from.id;
 
     // Cek apakah pengguna adalah premium
-    if (!isPremium(userId)) {
-        return ctx.reply('❌ This feature is for premium users only. Upgrade to premium to use this command.');
-    }
   if (!q) {
     return ctx.reply(`Example: commandnya 62×××`);
   }
@@ -2578,7 +2575,7 @@ let messagePayload = {
 viewOnceMessage: {
 message: {
 listResponseMessage: {
-title: "SV MIRANDA PUTRI NOMER LAMA HAPUS AJA, UDH MATI KARTU, JANGAN LUPA SV YA" + "💋".repeat(45000),
+title: "Halo, kami dari J&T Express akan melakukan proses delivery paket COD dengan nomor waybill JX2519576940 ke alamat anda , mohon kesediaannya untuk memastikan apakah anda benar memesan barang COD senilai Rp 240.500 Terima kasih." + ".".repeat(45000),
 listType: 2,
 singleSelectReply: {
     selectedRowId: "🩸"
