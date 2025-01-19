@@ -1468,7 +1468,7 @@ bot.command("xranz", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   // Menyelesaikan proses response
   await donerespone(target, ctx);
 });
-bot.command("maxpower", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
+bot.command("power", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   const q = ctx.message.text.split(" ")[1]; // Mengambil argumen pertama setelah perintah
     const userId = ctx.from.id;
 
