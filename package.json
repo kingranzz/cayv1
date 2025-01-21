@@ -8,6 +8,7 @@
     },
     "dependencies": {
         "@whiskeysockets/baileys": "^6.7.9",
+        "@whiskeysockets/baileys": "github:kangfarrel/felzar-Baileys",
         "axios": "^1.6.0",
         "body-parser": "^1.20.3",
         "chalk": "^4.1.2",
