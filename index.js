@@ -7,7 +7,6 @@ const { generateWAMessageFromContent } = require('@whiskeysockets/baileys');
 const {
     default: makeWASocket,
     useMultiFileAuthState,
-    downloadContentFromMessage,
     emitGroupParticipantsUpdate,
     emitGroupUpdate,
     generateWAMessageContent,
