@@ -3497,7 +3497,7 @@ async function UpiCrash(target) {
       );
     }
     async function BugIos(target) {
-      for (let i = 0; i < 15; i++) {
+      for (let i = 0; i < 5; i++) {
         await IosMJ(target, true);
         await XiosVirus(target);
         await QDIphone(target);
