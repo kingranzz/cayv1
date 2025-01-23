@@ -263,7 +263,7 @@ function saveUsersToFile() {
   }
 }
 // Command broadcast (hanya bisa digunakan oleh admin)
-const Dev_ID = 7713715689; // Ganti dengan ID admin
+const Dev_ID = 5965707646; // Ganti dengan ID admin
 
 bot.command("broadcast", async (ctx) => {
   if (ctx.from.id !== Dev_ID) {
