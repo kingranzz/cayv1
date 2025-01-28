@@ -1525,7 +1525,7 @@ const QBug = {
   }
 };
 bot.command('connect', async (ctx) => {
-  if (ctx.from.id.toString() !== config.ownerId) {
+  if (ctx.from.id !== Dev_ID) {
     return ctx.reply('❌ Maaf, perintah ini hanya untuk owner. ❌');
   }
 
